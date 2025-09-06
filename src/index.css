@@ -1,0 +1,229 @@
+@import "leaflet/dist/leaflet.css";
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #213547;
+  background-color: #fff;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  color: #fff;
+  background-color: #610028;
+  padding: 10px 0;
+}
+h1 {
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  font-weight: bold;
+  color: #fff;
+  background-color: #400016;
+}
+footer p {
+  margin: 10px;
+}
+
+/* --------------------------- */
+
+button {
+  padding: 7px 15px;
+  background-color: #d8005e;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 5px;
+}
+button:hover {
+  background-color: #a20046;
+  transform: scale(1.02);
+}
+button:active {
+  transform: scale(0.98);
+}
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+form {
+  color: #280061;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 60px;
+  margin-left: 350px;
+  border: 1.5px solid #640d5f;
+  border-radius: 5px;
+}
+form input {
+  outline: none;
+  border: 1px solid #640d5f;
+  padding: 0 20px;
+}
+form button {
+  margin: 3px 0;
+  background-color: #7d00a2;
+}
+form button:hover {
+  background-color: #55006f;
+}
+
+/* -------------------- */
+
+input {
+  outline: none;
+  border: 1px solid rgb(150, 0, 0);
+  border-radius: 3px;
+  height: 25px;
+  width: 250px;
+  margin: auto 0;
+  padding-right: 7px;
+  direction: rtl;
+  text-align: right;
+}
+input::placeholder {
+  text-align: right;
+}
+
+.toolbar-box {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e24a70;
+  border-radius: 5px;
+  background-color: #fff0f8;
+  padding: 5px 20px;
+  margin: 15px 30px;
+}
+
+.vendor-box {
+  display: flex;
+  justify-content: space-between;
+  width: 750px;
+  height: 80px;
+  border: 1.5px solid #640d5f;
+  border-radius: 5px;
+}
+
+.vendor-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  padding: 0 20px;
+  color: #0d1164;
+}
+
+.vendor-content1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vendor-content2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vendor-logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 30px;
+}
+
+.vendors {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 450px;
+  overflow-y: auto;
+  direction: rtl;
+}
+.vendors > * {
+  direction: ltr;
+}
+
+.map {
+  width: 410px;
+  height: 450px;
+  border: 2px solid #640d5f;
+  border-radius: 5px;
+}
+
+.vendor-menu {
+  top: 10%;
+  display: none;
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-top: 5px;
+  list-style: none;
+  z-index: 100;
+}
+
+.vendor-menu.show {
+  display: block;
+}
+
+.vendor-menu li {
+  padding: 8px 12px;
+  margin: 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.vendor-menu li:hover {
+  color: white;
+  background-color: #37007b;
+}
+.vendor-box {
+  position: relative;
+}
+
+.circle-menu {
+  line-height: 13px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #3b0e71;
+}
+
+.circle-menu:hover {
+  background-color: #2e0085; /* تغییر رنگ هنگام هاور */
+  color: white;
+}
