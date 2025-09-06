@@ -117,7 +117,6 @@ input::placeholder {
 .vendor-box {
   display: flex;
   justify-content: space-between;
-  width: 750px;
   height: 80px;
   border: 1.5px solid #640d5f;
   border-radius: 5px;
@@ -137,6 +136,7 @@ input::placeholder {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 450px;
 }
 
 .vendor-content2 {
@@ -226,4 +226,81 @@ input::placeholder {
 .circle-menu:hover {
   background-color: #2e0085; /* تغییر رنگ هنگام هاور */
   color: white;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1224px) {
+  .vendor-content1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 250px;
+  }
+  .map {
+    width: 500px;
+  }
+}
+
+@media (max-width: 1124px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vendors {
+    width: 100%;
+    height: 350px;
+  }
+
+  .map {
+    width: 100%;
+    height: 250px;
+    margin-top: 45px;
+  }
+
+  .vendor-box {
+    height: 60px;
+  }
+
+  .vendor-content {
+    gap: 8px;
+  }
+
+  .vendor-content1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 200px;
+  }
+
+  .vendor-logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  form {
+    margin-left: 0;
+    padding: 5px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  header,
+  footer {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 7px 10px;
+  }
+
+  .vendor-content1 {
+    gap: 10px;
+  }
+
+  .toolbar-box input {
+    width: 160px;
+  }
 }

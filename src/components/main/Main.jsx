@@ -14,6 +14,13 @@ import {
   useMap,
 } from "react-leaflet";
 
+const blueIcon = new L.Icon({
+  iconUrl:
+    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png",
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+});
+
 const redIcon = new L.Icon({
   iconUrl:
     "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png",
@@ -188,7 +195,7 @@ export default function Main() {
 
             {/* marker ها */}
             {filteredVendors.map((v) => (
-              <Marker key={v.id} position={v.location}>
+              <Marker key={v.id} position={v.location} icon={blueIcon}>
                 <Popup>
                   <b>{v.brand}</b> <br />
                   {v.owner} <br />

@@ -13,7 +13,7 @@ export default function Toolbar() {
         onChange={(e) => setSearch(e.target.value)}
       />
 
-      <button onClick={() => setAddVendorForm(true)}>افزودن همکار جدید</button>
+      <button onClick={() => setAddVendorForm(true)}>افزودن همکار</button>
     </div>
   );
 }
